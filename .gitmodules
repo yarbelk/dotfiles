@@ -1,0 +1,15 @@
+[submodule "_vim/bundle/python-mode"]
+	path = _vim/bundle/python-mode
+	url = https://github.com/klen/python-mode.git
+[submodule "_vim/bundle/command-t"]
+	path = _vim/bundle/command-t
+	url = git://git.wincent.com/command-t.git
+[submodule "_vim/bundle/snipmate"]
+	path = _vim/bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "_vim/bundle/fugitive"]
+	path = _vim/bundle/fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "_vim/bundle/gundo"]
+	path = _vim/bundle/gundo
+	url = http://github.com/sjl/gundo.vim.git
