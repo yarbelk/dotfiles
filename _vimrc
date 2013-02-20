@@ -165,6 +165,4 @@ set wildignore+=*.egg-info/**
 
 let g:acp_completeoptPreview=1
 
-au FileType python set omnifunc=pythoncomplete#Complete
-
 set colorcolumn=79
