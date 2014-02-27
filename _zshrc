@@ -4,6 +4,8 @@ ZSH=$HOME/.oh-my-zsh
 export EDITOR=vim
 export PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache
 
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -13,6 +15,8 @@ ZSH_THEME="robbyrussell"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias startflux="startx -- $HOME/.xinitrc_fluxbox"
+alias startgnome="startx -- $HOME/.xinitrc_gnome"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -46,11 +50,16 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 export PROJECT_HOME=$HOME/projects
+export GOPATH=$HOME/go
 
 
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper.sh
 
 source $ZSH/oh-my-zsh.sh
 
+eval "$(rbenv init -)"
+
 # Customize to your needs...
-export PATH=/usr/local/bin:$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export PATH=$HOME/bin:/opt/microchip/mplabx/mplab_ide/bin:/usr/local/bin:$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:$GOPATH/bin
+eval $(ssh-agent)
+#ssh-add

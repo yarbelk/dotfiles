@@ -25,3 +25,6 @@
 [submodule "_zsh/git-flow-completion"]
 	path = _zsh/git-flow-completion
 	url = https://github.com/bobthecow/git-flow-completion.git
+[submodule "jshint2.vim"]
+	path = jshint2.vim
+	url = https://github.com/Shutnik/jshint2.vim.git

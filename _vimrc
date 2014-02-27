@@ -64,7 +64,7 @@ filetype off
 call pathogen#infect()
 call pathogen#helptags()
 
-filetype plugin indent on
+filetype plugin on
 syntax on
 "
 "" Read/Write
@@ -116,12 +116,12 @@ let g:pymode_lint_cheker = "pep8,django-lint"
 
 
 " rope
-let g:pymode_rope = 1
+let g:pymode_rope = 0
 
 nmap <leader>j :RopeGotoDefinition<CR>
 
 " Autocreate and open rope project
-let g:pymode_rope_auto_project = 1
+let g:pymode_rope_auto_project = 0
 
 " Enable autoimport
 let g:pymode_rope_enable_autoimport = 1
@@ -131,7 +131,7 @@ let g:pymode_rope_autoimport_generate = 1
 
 let g:pymode_rope_codeassist_maxfixes = 10
 let g:pymode_rope_vim_completion = 1
-let g:pymode_rope_guess_project = 1
+let g:pymode_rope_guess_project = 0
 let g:pymode_rope_always_show_complete_menu = 1
 let g:pymode_rope_extended_complete = 1
 
