@@ -28,3 +28,12 @@
 [submodule "jshint2.vim"]
 	path = jshint2.vim
 	url = https://github.com/Shutnik/jshint2.vim.git
+[submodule "_vim/bundle/golang"]
+	path = _vim/bundle/golang
+	url = git@github.com:jnwhiteh/vim-golang.git
+[submodule "_vim/bundle/gocode"]
+	path = _vim/bundle/gocode
+	url = git@github.com:Blackrush/vim-gocode.git
+[submodule "_vim/bundle/tagbar"]
+	path = _vim/bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git
