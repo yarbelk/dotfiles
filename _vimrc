@@ -91,16 +91,43 @@ set ls=2                    " allways show status line
 set vb t_vb=                " Disable all bells.  I hate ringing/flashing.
 set confirm                 " Y-N-C prompt if closing with unsaved changes.
 
+
+" indents - Python
+autocmd FileType python setlocal nowrap                  " don't wrap text
+autocmd FileType python setlocal autoindent              " always set autoindenting on
+autocmd FileType python setlocal tabstop=4               " <tab> inserts 4 spaces 
+autocmd FileType python setlocal shiftwidth=4            " but an indent level is 2 spaces wide.
+autocmd FileType python setlocal softtabstop=4           " <BS> over an autoindent deletes both spaces.
+autocmd FileType python setlocal expandtab               " Use spaces, not tabs, for autoindent/tab key.
+
+" indents - javascript
+autocmd FileType javascript setlocal nowrap                  " don't wrap text
+autocmd FileType javascript setlocal autoindent              " always set autoindenting on
+autocmd FileType javascript setlocal tabstop=2               " <tab> inserts 22spaces 
+autocmd FileType javascript setlocal shiftwidth=2            " but an indent level is 2 spaces wide.
+autocmd FileType javascript setlocal softtabstop=2           " <BS> over an autoindent deletes both spaces.
+autocmd FileType javascript setlocal expandtab               " Use spaces, not tabs, for autoindent/tab key.
+
+" indents - C
+autocmd FileType C setlocal nowrap                  " don't wrap text
+autocmd FileType C setlocal autoindent              " always set autoindenting on
+autocmd FileType C setlocal tabstop=8               " <tab> inserts 4 spaces 
+autocmd FileType C setlocal shiftwidth=8            " but an indent level is 2 spaces wide.
+autocmd FileType C setlocal softtabstop=8           " <BS> over an autoindent deletes both spaces.
+autocmd FileType C setlocal noexpandtab               " Use tabs, not spaces, for autoindent/tab key.
+
+" indents - go
+autocmd FileType go setlocal nowrap                  " don't wrap text
+autocmd FileType go setlocal autoindent              " always set autoindenting on
+autocmd FileType go setlocal tabstop=4               " <tab> inserts 4 spaces 
+autocmd FileType go setlocal shiftwidth=4            " but an indent level is 2 spaces wide.
+autocmd FileType go setlocal softtabstop=4           " <BS> over an autoindent deletes both spaces.
+autocmd FileType go setlocal noexpandtab               " Use tabs, not spaces, for autoindent/tab key.
+
+" indents - makefiles
+autocmd FileType make setlocal noexpandtab
+
 "" Python Mode
-
-" indents
-set nowrap                  " don't wrap text
-set autoindent              " always set autoindenting on
-set tabstop=4               " <tab> inserts 4 spaces 
-set shiftwidth=4            " but an indent level is 2 spaces wide.
-set softtabstop=4           " <BS> over an autoindent deletes both spaces.
-set expandtab               " Use spaces, not tabs, for autoindent/tab key.
-
 " incremental searching
 set incsearch
 
@@ -199,5 +226,6 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \}
 
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 set colorcolumn=79
